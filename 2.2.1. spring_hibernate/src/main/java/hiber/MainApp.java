@@ -20,6 +20,11 @@ public class MainApp {
       userService.add(new User("User6", "Lastname6", "user6@mail.ru", new Car("Model2", 2)));
 
       List<User> users2 = userService.listUsers();
+
+      User user1 = userService.getUserByCarModelAndSeries("Model1", 1);
+
+      users2.add(user1);
+
       for (User user : users2) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
